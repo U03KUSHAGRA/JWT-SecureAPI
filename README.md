@@ -35,10 +35,30 @@ This project is fully tested using Postman and includes login and signup endpoin
 
 ## 📁 Folder Structure
 
-- `Controllers/` – Contains API endpoints
-- `Models/` – Data models
-- `Data/` – DB context and seeding
-- `Migrations/` – EF Core migrations
-- `Program.cs` – Entry point
-- `appsettings.json` – Configuration
+- `Controllers/` – Contains API endpoints  
+- `Models/` – Data models  
+- `Data/` – DB context and seeding  
+- `Migrations/` – EF Core migrations  
+- `Program.cs` – Entry point  
+- `appsettings.json` – Configuration  
 
+## 📄 Sample `appsettings.json`
+
+```json
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*",
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=YOUR_SERVER;Database=YOUR_DB;Trusted_Connection=True;"
+  },
+  "JWT": {
+    "Audience": "http://localhost:7104",
+    "Issuer": "http://localhost:7104",
+    "Key": "your_jwt_secret_here"
+  }
+}
